@@ -163,8 +163,11 @@ class _GooglePlaceAutoCompleteTextFieldState
         }
       }
     }
+    // Forzar tipo address si no está definido explícitamente
     if (widget.placeType != null) {
       apiURL += "&types=${widget.placeType?.apiString}";
+    } else {
+      apiURL += "&types=address";
     }
 
     if (widget.latitude != null &&
