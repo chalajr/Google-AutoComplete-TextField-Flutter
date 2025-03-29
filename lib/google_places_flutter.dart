@@ -174,7 +174,7 @@ class _GooglePlaceAutoCompleteTextFieldState
         widget.longitude != null &&
         widget.radius != null) {
       apiURL = apiURL +
-          "&location=${widget.latitude},${widget.longitude}&radius=${widget.radius}&strictbounds=true";
+          "&location=${widget.latitude},${widget.longitude}&radius=${widget.radius}";
     }
 
     if (_cancelToken?.isCancelled == false) {
